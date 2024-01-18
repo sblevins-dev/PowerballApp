@@ -1,0 +1,26 @@
+.num-container {
+    background: linear-gradient(rgb(117, 125, 161), rgb(225, 225, 252));
+    margin: 20px;
+    padding: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content:space-evenly;
+    max-width: 600px;
+}
+
+.ball {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin: 10px;
+    background: radial-gradient(white, rgb(199, 199, 199));
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ball:last-of-type {
+    background: radial-gradient(rgb(255, 255, 255), rgb(255, 1, 1));
+}
