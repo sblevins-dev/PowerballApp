@@ -1,17 +1,16 @@
 import React from "react";
-import "./ball.css";
-import { createMostOccurring } from "./createMostOccurring";
+import { createMostOcurringPB } from "./createMostOccurring";
 
-export const MostOccurring = ({ combos }) => {
-  const createOccurring = () => {
-    combos = createMostOccurring(combos);
+export const MostOcurringPB = ({ combos }) => {
+  const createPBHash = () => {
+    combos = createMostOcurringPB(combos);
   };
 
-  createOccurring();
+  createPBHash();
 
   return (
-    <div>
-      <h2>Most Occurring</h2>
+    <div className="pb-container">
+      <h2>Most Occurring PowerBall</h2>
       <div className="num-container num-wrapper">
         {combos &&
           combos.map((ball, index) => {
@@ -22,7 +21,7 @@ export const MostOccurring = ({ combos }) => {
                     ? ball[1] + " Times"
                     : ball[1] + " Time"}
                 </span>
-                <h2 className="ball">{ball[0]}</h2>
+                <h2 className="ball pb">{ball[0]}</h2>
               </div>
             );
           })}

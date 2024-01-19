@@ -1,16 +1,16 @@
 const createTriplets = (combos) => {
-//   combos = combos.map(arr => {
-//       let curr = arr[9].split(' ');
-//       curr.pop();
-//       return curr.map(num => parseInt(num, 10));
-//   });
+  combos = combos.map(arr => {
+      let curr = arr[9].split(' ');
+      curr.pop();
+      return curr.map(num => parseInt(num, 10));
+  });
 
   // temporary
-  combos = combos.map((arr) => {
-    let curr = arr.split(" ");
-    curr.pop();
-    return curr.map((num) => parseInt(num, 10));
-  });
+  // combos = combos.map((arr) => {
+  //   let curr = arr.split(" ");
+  //   curr.pop();
+  //   return curr.map((num) => parseInt(num, 10));
+  // });
 
   const counts = {};
   

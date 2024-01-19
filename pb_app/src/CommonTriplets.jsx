@@ -12,7 +12,7 @@ export const CommonTriplets = ({ combos }) => {
   console.log(triplets);
 
   return (
-    <div>
+    <div className="common-triplet-container">
       <h2>Common Triplets</h2>
       <div className="num-container triplet-wrapper">
         {triplets &&
@@ -23,7 +23,9 @@ export const CommonTriplets = ({ combos }) => {
               ))}
             </div>
           ))}
+          
       </div>
+      <p>Most common triplets in data since 2020</p>
     </div>
   );
 };

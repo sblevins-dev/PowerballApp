@@ -1,3 +1,63 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+  row-gap: 50px;
+  background-color: rgb(250, 250, 250);
+}
+
+.app-title {
+  display: flex;
+}
+
+.letter {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin: 10px;
+  background: radial-gradient(circle at 28% 28%, #ffffff, #a1a1a1);
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 1px 1px #00000077;
+  font-stretch: expanded;
+  padding: 5px;
+}
+
+.letter:last-of-type {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgb(255, 255, 255),
+    rgb(255, 1, 1)
+  );
+  letter-spacing: -0.2rem;
+  color: white;
+}
+
+@for $i from 1 through 10 {
+  .letter:nth-child(#{$i}) {
+    transform: scale(1, 2);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.qp-container,
+.winning-num-container,
+.common-triplet-container,
+.pb-container {
+  width: 100%;
+}
+
 .num-container {
   /* background: linear-gradient(rgb(133, 133, 133), rgb(46, 46, 46)); */
   background: rgba(255, 255, 255, 0.27);
@@ -18,7 +78,7 @@
 }
 
 .combo-container {
-  background-color: white;
+  border: 1px solid rgba(255, 0, 0, 0.315);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -45,6 +105,10 @@
   position: relative;
   box-shadow: 1px 1px 1px 1px #00000077;
   animation: bounce 3s ease-in-out infinite;
+}
+
+.times {
+  font-weight: bold;
 }
 
 @keyframes bounce {
@@ -123,14 +187,81 @@
 }
 
 .ball-container {
-  /* background-color: rgb(255, 255, 255); */
   border-radius: 5px;
   color: black;
   padding: 10px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ball-container > .ball {
   color: black;
   text-align: center;
+}
+
+.pb {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgb(255, 255, 255),
+    rgb(255, 1, 1)
+  );
+  animation: bounce2 3s ease-in-out infinite;
+}
+
+.btn {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 10px;
+  font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: rgb(245, 105, 105);
+  transform: scale(1.01);
+}
+
+@media (max-width: 800px) {
+  .home-wrapper {
+    row-gap: 10px;
+  }
+  .winning-num-container > .num-container {
+    padding: 20px;
+    justify-content: space-evenly;
+  }
+  .winning-num-container > .num-container > .ball {
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+    margin: 0;
+  }
+  .qp-container > .num-container {
+    padding: 20px;
+  }
+  .qp-container > .num-container > .ball {
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+    margin: 0;
+  }
+  .letter {
+    height: 2rem;
+    width: 2rem;
+    margin: 5px;
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .num-wrapper > .ball-container > .ball {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    font-size: 1.5rem;
+  }
 }
