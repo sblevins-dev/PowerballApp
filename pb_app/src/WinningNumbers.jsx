@@ -15,7 +15,7 @@ const WinningNumbers = ({ combos }) => {
         <strong>{lastDrawDate.toLocaleDateString()}</strong>
       </span>
       <div className="num-container">
-        {combo && combo.map((num) => <span className="ball">{num} </span>)}
+        {combo && combo.map((num, index) => <span key={index} className="ball">{num} </span>)}
         <div></div>
       </div>
     </div>

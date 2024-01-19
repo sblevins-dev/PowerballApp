@@ -16,7 +16,6 @@ export const Home = () => {
       const response = await fetch(process.env.REACT_APP_URL);
       const data = await response.json();
       setData(data.data);
-      console.log(data);
     } catch (error) {
       console.error("Error fetching JSON data: ", error);
     }
@@ -35,8 +34,8 @@ export const Home = () => {
   return (
     <div className="home-wrapper">
       <h1 className="app-title">
-        {appTitle.map((letter) => (
-          <span className="letter">{letter}</span>
+        {appTitle.map((letter, index) => (
+          <span key={index} className="letter">{letter}</span>
         ))}
         <span className="letter">{"BALL"}</span>
       </h1>

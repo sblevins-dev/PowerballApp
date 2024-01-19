@@ -24,8 +24,6 @@ const createMostOccurring = (combos) => {
     sortedArr.push([key, hash[key]]);
   }
 
-  console.log(sortedArr);
-
   sortedArr.sort((a, b) => b[1] - a[1]);
 
   return sortedArr;

@@ -32,8 +32,6 @@ const createTriplets = (combos) => {
   // Take the top three most occurring triplets
   const topThreeTriplets = sortedTriplets.slice(0, 4);
 
-  console.log(topThreeTriplets.map((triplet) => triplet.split(',').sort((a, b) => a - b).map(Number)))
-
   return topThreeTriplets.map((triplet) => triplet.split(',').sort((a, b) => a - b).map(Number));
 }
 

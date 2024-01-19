@@ -9,17 +9,15 @@ export const CommonTriplets = ({ combos }) => {
 
   let triplets = findCommonTriplets();
 
-  console.log(triplets);
-
   return (
     <div className="common-triplet-container">
       <h2>Common Triplets</h2>
       <div className="num-container triplet-wrapper">
         {triplets &&
-          triplets.map((num) => (
-            <div className="combo-container triplet-container">
-              {num.map((n) => (
-                <span className="ball">{n} </span>
+          triplets.map((num, index) => (
+            <div key={index} className="combo-container triplet-container">
+              {num.map((n, index) => (
+                <span key={index} className="ball">{n} </span>
               ))}
             </div>
           ))}

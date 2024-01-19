@@ -15,7 +15,7 @@ export const MostOcurringPB = ({ combos }) => {
         {combos &&
           combos.map((ball, index) => {
             return (
-              <div className="ball-container">
+              <div key={index} className="ball-container">
                 <span className="times">
                   {ball[1] > 1
                     ? ball[1] + " Times"
