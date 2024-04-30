@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PowerballApp/static/css/main.497dd623.css",
-    "main.js": "/PowerballApp/static/js/main.2d62d13d.js",
+    "main.css": "/PowerballApp/static/css/main.c88eac76.css",
+    "main.js": "/PowerballApp/static/js/main.1dd68374.js",
     "static/js/787.4bbc7ca1.chunk.js": "/PowerballApp/static/js/787.4bbc7ca1.chunk.js",
     "index.html": "/PowerballApp/index.html",
-    "main.497dd623.css.map": "/PowerballApp/static/css/main.497dd623.css.map",
-    "main.2d62d13d.js.map": "/PowerballApp/static/js/main.2d62d13d.js.map",
+    "main.c88eac76.css.map": "/PowerballApp/static/css/main.c88eac76.css.map",
+    "main.1dd68374.js.map": "/PowerballApp/static/js/main.1dd68374.js.map",
     "787.4bbc7ca1.chunk.js.map": "/PowerballApp/static/js/787.4bbc7ca1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.497dd623.css",
-    "static/js/main.2d62d13d.js"
+    "static/css/main.c88eac76.css",
+    "static/js/main.1dd68374.js"
   ]
 }
