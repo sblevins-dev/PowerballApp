@@ -10,7 +10,7 @@ const WinningNumbers = ({ combos }) => {
 
   return (
     <div className="winning-num-container">
-      <h2>Last Winning Numbers</h2>
+      <h3>Last Winning Numbers</h3>
       <span>
         <strong>{lastDrawDate.toLocaleDateString()}</strong>
       </span>

@@ -6,6 +6,8 @@ import WinningNumbers from "./WinningNumbers";
 import { CommonTriplets } from "./CommonTriplets";
 import { MostOccurring } from "./MostOccurring.jsx";
 import { MostOcurringPB } from "./MostOcurringPB.jsx";
+import PowerballNumberChart from "./PowerballNumberChart.js";
+import WhiteBallNumberChart from "./WhiteBallNumberChart.js";
 
 export const Home = () => {
   const [data, setData] = useState(null);
@@ -22,7 +24,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    if (data == null) fetchData();
   }, []);
 
   const createCombination = () => {
@@ -33,21 +35,32 @@ export const Home = () => {
 
   return (
     <div className="home-wrapper">
-      <h1 className="app-title">
-        {appTitle.map((letter, index) => (
-          <span key={index} className="letter">{letter}</span>
-        ))}
-        <span className="letter">{"BALL"}</span>
-      </h1>
+      <div className="app-title">
+        <div className="pb-title">
+          {appTitle.map((letter, index) => (
+            <span key={index} className="letter">{letter}</span>
+          ))}
+          <span className="letter">{"BALL"}</span>
+        </div>
+
+        <h2>Statistics</h2>
+        <p>Data from <a href="https://data.gov" target="_blank">Data.gov</a>: Combinations since 2020</p>
+      </div>
+
 
       {data !== null && <WinningNumbers combos={data} />}
 
       <QuickPick combo={combo} createCombo={createCombination} />
+      {data !== null && <WhiteBallNumberChart data={data} />}
       {data !== null && <CommonTriplets combos={data} />}
-      {data !== null && <MostOccurring combos={data} />}
-      {data !== null && <MostOcurringPB combos={data} />}
+      {data !== null && <PowerballNumberChart data={data} />}
+      
+      {/* {data !== null && <MostOccurring combos={data} />} */}
+      {/* {data !== null && <MostOcurringPB combos={data} />} */}
 
-      <p>PowerBall past combination data from data.gov</p>
+
+
+      <p>PowerBall past combination data from <a href="https://data.gov" target="_blank">Data.gov</a></p>
     </div>
   );
 };

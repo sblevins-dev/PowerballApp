@@ -12,7 +12,7 @@ export const CommonTriplets = ({ combos }) => {
   return (
     <div className="common-triplet-container">
       <h2>Common Triplets</h2>
-      <div className="num-container triplet-wrapper">
+      <div className="triplet-wrapper">
         {triplets &&
           triplets.map((num, index) => (
             <div key={index} className="combo-container triplet-container">
